@@ -169,7 +169,7 @@ class JS extends Minify
             // the regexes just a few lines earlier)
             $js = $this->replace($js);
 
-            $js = $this->propertyNotation($js);
+            // $js = $this->propertyNotation($js);
             $js = $this->shortenBools($js);
             $js = $this->stripWhitespace($js);
 
@@ -418,8 +418,8 @@ class JS extends Minify
          * script: ASI will kick in here & we're all about minifying.
          * Semicolons at beginning of the file don't make any sense either.
          */
-        $content = preg_replace('/;(\}|$)/s', '\\1', $content);
-        $content = ltrim($content, ';');
+        // $content = preg_replace('/;(\}|$)/s', '\\1', $content);
+        // $content = ltrim($content, ';');
 
         // get rid of remaining whitespace af beginning/end
         return trim($content);

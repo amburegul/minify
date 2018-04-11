@@ -658,7 +658,7 @@ class CSS extends Minify
         $content = preg_replace('/:('.implode('|', $pseudos).')\(\s*([+-]?)\s*(.+?)\s*([+-]?)\s*(.*?)\s*\)/', ':$1($2$3$4$5)', $content);
 
         // remove semicolon/whitespace followed by closing bracket
-        $content = str_replace(';}', '}', $content);
+        // $content = str_replace(';}', '}', $content);
 
         return trim($content);
     }
